@@ -11,10 +11,10 @@ def download_model():
     output = 'breast_cancer_classifier_corrected.h5'
     gdown.download(url, output, quiet=False)
 
-# Check if model file exists, if not, download it
-model_file = 'breast_cancer_classifier_corrected.h5'
-if not os.path.isfile(model_file):
-    download_model()
+# # Check if model file exists, if not, download it
+# model_file = 'breast_cancer_classifier_corrected.h5'
+# if not os.path.isfile(model_file):
+#     download_model()
 
 # Load the pre-trained model
 model = load_model(model_file)
