@@ -3,4 +3,3 @@ tensorflow  # or other relevant libraries you used
 scikit-learn
 pillow
 numpy
-PIL
