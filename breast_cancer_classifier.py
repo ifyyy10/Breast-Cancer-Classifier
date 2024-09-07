@@ -11,15 +11,6 @@ IMPORT ALL LIBRARIES AND MOUNT GOOGLE DRIVE
 
 # import all libraries
 import os
-from tensorflow.keras.applications import VGG16
-from tensorflow.keras import layers, models, Input
-import matplotlib.pyplot as plt
-import ipywidgets as widgets
-from IPython.display import display
-import numpy as np
-from tensorflow.keras.models import load_model
-from PIL import Image
-
 # Mount Google Drive
 from google.colab import drive
 drive.mount('/content/drive')
