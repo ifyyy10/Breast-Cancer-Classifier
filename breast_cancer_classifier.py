@@ -11,7 +11,6 @@ IMPORT ALL LIBRARIES AND MOUNT GOOGLE DRIVE
 
 # import all libraries
 import os
-import wget
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.applications import VGG16
 from tensorflow.keras import layers, models, Input
