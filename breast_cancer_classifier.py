@@ -9,8 +9,6 @@ Original file is located at
 IMPORT ALL LIBRARIES AND MOUNT GOOGLE DRIVE
 """
 
-!pip install wget
-
 # import all libraries
 import os
 import wget
