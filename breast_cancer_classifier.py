@@ -6,19 +6,19 @@ import gdown
 import os
 
 # Function to download model from Google Drive
-def download_model():
-    file_id = '1xJBec2aPibWKWYMfoOz2K5hiq16QeI0x'  # Extracted file ID from your Google Drive shareable link
-    url = f'https://drive.google.com/uc?id={file_id}'
-    output = 'breast_cancer_classifier_corrected.h5'
-    gdown.download(url, output, quiet=False)
+# def download_model():
+#     file_id = '1xJBec2aPibWKWYMfoOz2K5hiq16QeI0x'  # Extracted file ID from your Google Drive shareable link
+#     url = f'https://drive.google.com/uc?id={file_id}'
+#     output = 'breast_cancer_classifier_corrected.h5'
+#     gdown.download(url, output, quiet=False)
 
-# Check if model file exists, if not, download it
-model_file = 'breast_cancer_classifier_corrected.h5'
-if not os.path.isfile(model_file):
-    download_model()
+# # Check if model file exists, if not, download it
+# model_file = 'breast_cancer_classifier_corrected.h5'
+# if not os.path.isfile(model_file):
+#     download_model()
 
-# Load the pre-trained model
-model = load_model(model_file)
+# # Load the pre-trained model
+# model = load_model(model_file)
 
 # Define the image preprocessing function
 def preprocess_image(image):
