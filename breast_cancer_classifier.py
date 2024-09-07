@@ -2,10 +2,22 @@ import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
-import io
+import gdown
+import os
+
+# Function to download model from Google Drive
+def download_model():
+    url = 'https://drive.google.com/https://drive.google.com/file/d/1xJBec2aPibWKWYMfoOz2K5hiq16QeI0x/view?usp=drive_link'
+    output = 'breast_cancer_classifier_corrected.h5'
+    gdown.download(url, output, quiet=False)
+
+# Check if model file exists, if not, download it
+model_file = 'breast_cancer_classifier_corrected.h5'
+if not os.path.isfile(model_file):
+    download_model()
 
 # Load the pre-trained model
-model = load_model('breast_cancer_classifier_corrected.h5') 
+model = load_model(model_file)
 
 # Define the image preprocessing function
 def preprocess_image(image):
@@ -34,4 +46,3 @@ if uploaded_file is not None:
     # Classify the image
     result = classify_image(image)
     st.write(f"Prediction: {result}")
-
