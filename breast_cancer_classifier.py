@@ -28,9 +28,13 @@ except Exception as e:
 
 # Define the image preprocessing function
 def preprocess_image(image):
-    img = image.resize((224, 224))
-    img_array = np.expand_dims(np.array(img) / 255.0, axis=0)
+    img = image.resize((224, 224))  # Resize image
+    img_array = np.array(img) / 255.0  # Convert to array and normalize
+    if img_array.ndim == 2:  # If grayscale, convert to RGB
+        img_array = np.stack([img_array]*3, axis=-1)
+    img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
     return img_array
+
 
 # Define the classification function
 def classify_image(image):
