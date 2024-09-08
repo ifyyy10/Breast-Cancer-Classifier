@@ -1,5 +1,5 @@
-streamlit==1.22.0  # or the latest version
-tensorflow==2.12.0  # or the version that matches your code
+streamlit
+tensorflow
 numpy
 Pillow
 scikit-learn
