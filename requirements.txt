@@ -1,7 +1,8 @@
-streamlit
-tensorflow==2.17.0   # or other relevant libraries you used
+streamlit==1.22.0  # or the latest version
+tensorflow==2.12.0  # or the version that matches your code
+numpy
+Pillow
 scikit-learn
-pillow
 numpy
 gdown
 scipy
