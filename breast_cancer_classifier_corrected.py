@@ -23,7 +23,7 @@ st.title("Breast Cancer Image Classification")
 st.write("Upload an image to classify whether it's benign, malignant, normal, or unknown.")
 
 # Upload image section
-uploaded_file = st.file_uploader("Choose an image...", type="jpg")
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png"])
 
 if uploaded_file is not None:
     # Display the uploaded image
